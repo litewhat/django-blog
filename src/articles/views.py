@@ -52,9 +52,7 @@ def comment(request, article_id, *args, **kwargs):
         'article_id': article.id,
     }
 
-    if not comment_content:
-        pass
-    else :
+    if comment_content:
         comment = Comment(article=article, content=comment_content)
         comment.save()
 
