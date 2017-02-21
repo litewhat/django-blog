@@ -3,6 +3,7 @@ from django.contrib import admin
 
 from . import views
 
+app_name = 'articles'
 urlpatterns = [
 	url(r'^$', views.list, name='list'),
 	url(r'^(?P<article_id>[0-9]+)/$', views.detail, name='detail'),
