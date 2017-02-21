@@ -16,9 +16,9 @@
 <!-- End form -->
 
 <hr/>
-{% for comment in comments %}
+{% for comment in article.comments %}
 	<h5>{{ comment.content }}</h5>
-	<h6>{{ comment.created }}</h6>
+	<h6>Created: {{ comment.created }}</h6>
 	<hr/>
 {% empty %}
 	<p>No comments yet.</p>

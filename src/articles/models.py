@@ -14,10 +14,10 @@ class Article(models.Model):
         return str_repr
 
     def comments(self):
-        return self.comment_set.all()
+        return self.comment_set.all().order_by('-created')
 
     def get_absolute_url(self):
-        return reverse('articles:detail', kwargs={'article_id': self.id})
+        return reverse('articles:detail', kwargs={'pk': self.id})
 
 
 class Comment(models.Model):
