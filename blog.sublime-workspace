@@ -1,0 +1,548 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"al",
+				"alphabet\tstatement"
+			],
+			[
+				"asc",
+				"ascii_lowercase\tstatement"
+			],
+			[
+				"l",
+				"lowercase\tinstance"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"User",
+				"UserRegisterView\tclass"
+			],
+			[
+				"con",
+				"confirm_password\tstatement"
+			],
+			[
+				"is",
+				"isinstance\tfunction"
+			],
+			[
+				"exce",
+				"exclude"
+			],
+			[
+				"get",
+				"get_queryset"
+			],
+			[
+				"hash",
+				"hashtag_obj\tstatement"
+			],
+			[
+				"hashtag",
+				"hashtag\tstatement"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"fet",
+				"fetchOneId"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"data",
+				"data-id"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"date",
+				"date_display"
+			],
+			[
+				"Ma",
+				"ManyToManyField\tclass"
+			],
+			[
+				"this",
+				"this_"
+			],
+			[
+				"tweet",
+				"tweetContainerID"
+			],
+			[
+				"parsed_",
+				"parsed_hashtags_receiver\tfunction"
+			],
+			[
+				"pren",
+				"preventDefault"
+			],
+			[
+				"Re",
+				"RetweetAPIView\tclass"
+			],
+			[
+				"pa",
+				"parent_object\tparam"
+			],
+			[
+				"isRet",
+				"is_retweet"
+			],
+			[
+				"HttpResponse",
+				"HttpResponseRedirect\tclass"
+			],
+			[
+				"parent",
+				"parent_obj"
+			],
+			[
+				"Tweet",
+				"TweetManager"
+			],
+			[
+				"mo",
+				"model"
+			],
+			[
+				"re",
+				"reverse_lazy\tfunction"
+			],
+			[
+				"Ha",
+				"HashTagView\tclass"
+			],
+			[
+				"auto",
+				"auto_now_add\tFalse"
+			],
+			[
+				"Date",
+				"DateTimeField\tclass"
+			],
+			[
+				"query",
+				"queryset2\tstatement"
+			],
+			[
+				"quer",
+				"queryset1\tstatement"
+			],
+			[
+				"user",
+				"user_profile\tstatement"
+			],
+			[
+				"sende",
+				"sender\tparam"
+			],
+			[
+				"post",
+				"post_save_user_receiver\tfunction"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"nex",
+				"nextTweetUrl"
+			],
+			[
+				"fetch",
+				"fetchUrl"
+			],
+			[
+				"ne",
+				"nextTweetUrl"
+			],
+			[
+				"done",
+				"doneInterval"
+			],
+			[
+				"search",
+				"searchInput"
+			],
+			[
+				"form",
+				"formData"
+			],
+			[
+				"Twee",
+				"TweetModelSerializer"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"TweetMode",
+				"TweetModelForm"
+			],
+			[
+				"Tw",
+				"TweetListView"
+			],
+			[
+				"twee",
+				"tweet_detail_view"
+			],
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"H",
+				"HttpResponse"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 114.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Function"
+			]
+		],
+		"width": 458.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/litewhat/Courses-Udemy/dm/src/dm/settings.py",
+		"/home/litewhat/Courses-Udemy/mega-python-course/src/TextGenerator/script2.py",
+		"/home/litewhat/Courses-Udemy/dm/.gitignore",
+		"/home/litewhat/Courses-Udemy/mega-python-course/src/TextGenerator/script1.py",
+		"/home/litewhat/Courses-Udemy/script2.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/settings/production.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/settings/local.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/settings/base.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/api/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/templates/search.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/templates/hashtags/tag_view.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/models.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/forms.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts/user_detail.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/tweet_list.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templatetags/recommended.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/urls.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/registration/login.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts/snippets/recommend.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/models.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/api/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/templates/base.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/urls.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts/user_register_form.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts/registration/login.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts/login.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templatetags/__init__.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/api/__init__.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/models.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/tweet_detail.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/api/serializers.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/search_form.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/api/urls.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/form.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/templates/reply-modal.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/signals.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/api/urls.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/urls.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/api/serializers.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/hashtags/admin.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/admin.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/tests.py",
+		"/home/litewhat/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/templates/accounts",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/api/pagination.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/api/__init__.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/api/__init__.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/accounts/api/views.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/templates/navbar.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/forms.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/tests.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/create_view.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/settings/__init__.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/detail_view.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/templates/home.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/delete_confirm.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/update_view.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/templates/tweets/list_view.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/mixins.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweets/validators.py",
+		"/home/litewhat/Courses-Udemy/tweetme/lib/python3.5/site-packages/django/template/utils.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/wsgi.py",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/templates/home.html",
+		"/home/litewhat/Courses-Udemy/tweetme/src/static-storage/static/css/custom.css",
+		"/home/litewhat/Courses-Udemy/tweetme/src/tweetme/settings.py",
+		"/home/litewhat/DjangoProjects/webproject/webproject/urls.py",
+		"/home/litewhat/DjangoProjects/webproject/polls/urls.py",
+		"/home/litewhat/DjangoProjects/webproject/polls/views.py",
+		"/home/litewhat/NodeJS/example.js",
+		"/home/litewhat/NodeJS/server.js",
+		"/home/litewhat/weather-application/application/views/time.php",
+		"/home/litewhat/weather-application/application/controllers/Time.php",
+		"/home/litewhat/simple-social-application/application/views/register/index.php",
+		"/home/litewhat/simple-social-application/application/views/login/index.php",
+		"/home/litewhat/simple-social-application/application/views/index.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"username",
+			"password",
+			"td",
+			"initialUrl",
+			"loadTweet",
+			"queryset",
+			"item",
+			"fetchTweets",
+			"fetchOneId",
+			"loadTweetContainer",
+			"fetchTweets",
+			"content",
+			".tweet-form",
+			"tweet-form",
+			"#tweet-form",
+			"tweet-form",
+			"tweet-reply",
+			"retweet",
+			"attachTweet",
+			"LikeAPIView",
+			"not_liked",
+			"containerId",
+			"loadTweet",
+			"$(\"#tweet-container\")",
+			"#tweet-container",
+			"console",
+			"BASE_DIR",
+			"queryset",
+			"tweet:ost",
+			"attachTweet",
+			"ajax",
+			"nextTweetUrl",
+			"fetchTweets",
+			"append",
+			"parent_obj",
+			",",
+			"kwargs",
+			"reverse",
+			"toogle_user",
+			"user",
+			"tweet",
+			"AUTH_USER_MODEL",
+			"GET",
+			"tweetValue",
+			"var tweetValue",
+			"tweetForm",
+			"();",
+			"tweetForm",
+			"> ",
+			"'",
+			"queryset",
+			"id",
+			"as_view",
+			"\n</",
+			">\n",
+			"load"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "blog.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 295.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
