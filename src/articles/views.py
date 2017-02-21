@@ -6,27 +6,8 @@ from django.views import generic
 
 
 from .models import Article, Comment
+from .forms import ArticleForm
 
-
-
-def index(request, *args, **kwargs):
-    # only for testing:
-    print(args)
-    print(kwargs)
-    return HttpResponse('This is articles view.<br/>' + str(kwargs))
-
-
-
-# def list(request, *args, **kwargs):
-#     articles = Article.objects.all().order_by('-created')
-#     #articles = None // for testing
-#     #comments = [article.comments() for article in articles]
-#     template = loader.get_template('articles/index.html')
-#     context = {
-#         'articles': articles,
-#     }
-
-#     return HttpResponse(template.render(context, request))
 
 
 class ArticleListView(generic.ListView):
@@ -36,19 +17,6 @@ class ArticleListView(generic.ListView):
     def get_queryset(self):
         return Article.objects.all().order_by('-created')
 
-
-# def detail(request, article_id, *args, **kwargs):
-#     #article = Article.objects.get(id=article_id)
-#     article = get_object_or_404(Article, id=article_id) # it's better than that above
-#     comments = article.comments().order_by('-created')
-#     template = loader.get_template('articles/detail.html')
-
-#     context = {
-#         'article': article,
-#         'comments': comments,
-#     }
-
-#     return HttpResponse(template.render(context, request))
 
 
 class ArticleDetailView(generic.DetailView):
@@ -70,3 +38,25 @@ def comment(request, article_id, *args, **kwargs):
         comment.save()
 
     return HttpResponseRedirect(reverse('articles:detail', kwargs=context))
+
+
+
+def create(request, *args, **kwargs):
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+
+        if form.is_valid():
+            data_dict = form.clean()
+            title = data_dict['title']
+            content = data_dict['content']
+            article = Article(title=title, content=content)
+            article.save()
+            return HttpResponseRedirect(reverse('articles:list'))
+    else:
+        form = ArticleForm()
+        context = {
+            'form': form,
+            'action_url': reverse('articles:create')
+        }
+
+    return render(request, 'articles/create_article.html', context)

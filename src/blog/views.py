@@ -1,7 +1,12 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.urls import reverse
 
-def index(request, *args, **kwargs):
-    # only for testing:
-    print(args)
-    print(kwargs)
-    return HttpResponse('This is homepage.')
+from articles.forms import ArticleForm
+
+def home(request, *args, **kwargs):
+    form = ArticleForm()
+    context = {
+        'form': form,
+        'action_url': reverse('articles:create'),
+    }
+    return render(request, 'home.html', context)

@@ -8,4 +8,5 @@ urlpatterns = [
 	url(r'^$', views.ArticleListView.as_view(), name='list'),
 	url(r'^(?P<pk>[0-9]+)/$', views.ArticleDetailView.as_view(), name='detail'),
 	url(r'^(?P<article_id>[0-9]+)/comment/$', views.comment, name='comment'),
+	url(r'^create/$', views.create, name='create'),
 ]
