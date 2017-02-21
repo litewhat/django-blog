@@ -1,0 +1,10 @@
+{% for article in articles %}
+	<h2>{{ article.title }}</h2>
+	<p>{{ article.content }}</p>
+	<h4>Updated: {{ article.updated }}</h4>
+	<h4>Created: {{ article.created }}</h4>
+	<a href="{{ article.get_absolute_url }}">Detail</a>
+	<hr/>
+{% empty %}
+	<p>No articles yet!</p>
+{% endfor %}

@@ -1,0 +1,12 @@
+<h2>{{ article.title }}</h2>
+<h4>{{ article.content }}</h4>
+<h6>{{ article.updated }}</h6>
+<h6>{{ article.created }}</h6>
+<hr/>
+{% for comment in comments %}
+	<h5>{{ comment.content }}</h5>
+	<h6>{{ comment.created }}</h6>
+	<hr/>
+{% empty %}
+	<p>No comments yet.</p>
+{% endfor %}
