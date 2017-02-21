@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"template",
+				"template_name"
+			],
+			[
+				"Http",
+				"HttpResponseRedirect\tclass"
+			],
+			[
+				"comment",
+				"comment_content\tstatement"
+			],
+			[
+				"article",
+				"article_id\tparam"
+			],
+			[
+				"get",
+				"get_object_or_404\tfunction"
+			],
+			[
+				"if",
+				"if\tIf Condition"
+			],
+			[
+				"arti",
+				"article_id\tparam"
+			],
+			[
+				"s",
+				"str_repr"
+			],
+			[
+				"auto",
+				"auto_now_add\tFalse"
+			],
+			[
+				"str",
+				"str_repr\tstatement"
+			],
+			[
+				"HttpRes",
+				"HttpResponse\tclass"
+			],
+			[
 				"al",
 				"alphabet\tstatement"
 			],
@@ -14,10 +58,6 @@
 			[
 				"l",
 				"lowercase\tinstance"
-			],
-			[
-				"if",
-				"ifmain\tif __name__ == '__main__'"
 			],
 			[
 				"User",
@@ -34,10 +74,6 @@
 			[
 				"exce",
 				"exclude"
-			],
-			[
-				"get",
-				"get_queryset"
 			],
 			[
 				"hash",
@@ -128,10 +164,6 @@
 				"HashTagView\tclass"
 			],
 			[
-				"auto",
-				"auto_now_add\tFalse"
-			],
-			[
 				"Date",
 				"DateTimeField\tclass"
 			],
@@ -215,6 +247,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/blog/settings.py",
+			"settings":
+			{
+				"buffer_size": 3266,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -279,8 +320,29 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/litewhat/DjangoProjects/blog",
+		"/home/litewhat/DjangoProjects/blog/src/articles",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles",
+		"/home/litewhat/DjangoProjects/blog/static-storage"
+	],
 	"file_history":
 	[
+		"/home/litewhat/DjangoProjects/blog/src/articles/static/articles/style.css",
+		"/home/litewhat/DjangoProjects/blog/src/blog/static/blog/style.css",
+		"/home/litewhat/DjangoProjects/blog/static/home.js",
+		"/home/litewhat/DjangoProjects/blog/src/articles/urls.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/index.html",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/detail.html",
+		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/models.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/admin.py",
+		"/home/litewhat/DjangoProjects/blog/README.md",
+		"/home/litewhat/DjangoProjects/blog/src/blog/settings.py",
+		"/home/litewhat/DjangoProjects/blog/.gitignore",
+		"/home/litewhat/DjangoProjects/blog/src/blog/urls.py",
+		"/home/litewhat/DjangoProjects/blog/src/blog/views.py",
 		"/home/litewhat/Courses-Udemy/dm/src/dm/settings.py",
 		"/home/litewhat/Courses-Udemy/mega-python-course/src/TextGenerator/script2.py",
 		"/home/litewhat/Courses-Udemy/dm/.gitignore",
@@ -363,7 +425,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -377,6 +439,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error_message",
+			"article",
+			"'.format(article.",
+			"html += '",
+			"h2",
+			"p",
 			"username",
 			"password",
 			"td",
@@ -450,8 +518,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/blog/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3177,
+								3177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1582.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
