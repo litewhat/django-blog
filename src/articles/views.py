@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.template import loader
@@ -27,7 +28,8 @@ class ArticleDetailView(DetailView):
 
 
 
-class CommentArticleView(View):
+class ArticleCommentView(LoginRequiredMixin, View):
+    login_url = reverse_lazy('login')
 
     def post(self, request, *args, **kwargs):
         article = get_object_or_404(Article, id=kwargs['pk'])
@@ -44,7 +46,8 @@ class CommentArticleView(View):
 
 
 
-class ArticleCreateView(CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
+    login_url = reverse_lazy('login')
     model = Article
     form_class = ArticleForm
     template_name = 'articles/create_article.html'

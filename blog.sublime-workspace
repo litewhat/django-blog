@@ -256,31 +256,11 @@
 	"buffers":
 	[
 		{
-			"contents": "from django.shortcuts import render\nfrom django.urls import reverse_lazy\nfrom django.views.generic.base import TemplateView\n\nfrom articles.forms import ArticleForm\n\n\n# def home(request, *args, **kwargs):\n#     form = ArticleForm()\n#     context = {\n#         'form': form,\n#         'action_url': reverse('articles:create'),\n#     }\n#     return render(request, 'home.html', context)\n\n\nclass HomePageView(TemplateView):\n    template_name = 'home.html'\n\n    # def form_valid(self, form):\n    #     print(self.get_context_data())\n    #     return super().form_valid(form)\n\n    # # def get_context_data(self, **kwargs):\n    # #     context = super().get_context_data(**kwargs)\n    # #     # context['form'] = ArticleForm()\n    # #     # context['action_url'] = reverse('articles:create')\n    # #     return context\n",
 			"file": "src/blog/views.py",
-			"file_size": 1006,
-			"file_write_time": 131322350844309196,
 			"settings":
 			{
-				"buffer_size": 812,
+				"buffer_size": 424,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/blog/urls.py",
-			"settings":
-			{
-				"buffer_size": 905,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/articles/urls.py",
-			"settings":
-			{
-				"buffer_size": 418,
 				"line_ending": "Unix"
 			}
 		},
@@ -288,8 +268,16 @@
 			"file": "src/templates/home.html",
 			"settings":
 			{
-				"buffer_size": 64,
+				"buffer_size": 63,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/templates/articles/form.html",
+			"settings":
+			{
+				"buffer_size": 120,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,17 +367,17 @@
 	],
 	"file_history":
 	[
+		"/home/litewhat/DjangoProjects/blog/src/blog/urls.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/admin.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/form.html",
 		"/home/litewhat/DjangoProjects/blog/src/templates/base.html",
-		"/home/litewhat/DjangoProjects/blog/src/blog/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/blog/settings.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/forms.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/create_article.html",
-		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
 		"/home/litewhat/DjangoProjects/blog/src/blog/views.py",
 		"/home/litewhat/DjangoProjects/blog/src/templates/home.html",
-		"/home/litewhat/DjangoProjects/blog/src/articles/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/templates/home.html/home.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/static/articles/style.css",
 		"/home/litewhat/DjangoProjects/blog/src/blog/static/blog/style.css",
@@ -495,6 +483,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"views",
 			"error_message",
 			"article",
 			"'.format(article.",
@@ -574,7 +563,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -583,15 +572,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 812,
+						"buffer_size": 424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								441,
-								441
+								422,
+								422
 							]
 						],
 						"settings":
@@ -603,82 +592,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/blog/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 905,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								867,
-								867
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/articles/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								208,
-								208
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "src/templates/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 63,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								52,
-								52
+								62,
+								62
 							]
 						],
 						"settings":
@@ -690,11 +621,39 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
+					"file": "src/articles/templates/articles/form.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "src/articles/templates/articles/create_article.html",
 					"semi_transient": false,
 					"settings":

@@ -2,17 +2,21 @@
 <h4>{{ article.content }}</h4>
 <h6>{{ article.updated }}</h6>
 <h6>{{ article.created }}</h6>
+
+{% if request.user.is_authenticated %}
 <hr/>
 
 <!-- Form to comment article -->
 <!-- {% if error_message %}
 <p><strong>{{ error_message }}</strong></p>
 {% endif %} -->
-<form action="{% url 'articles:comment' article.id %}" method="post">
-{% csrf_token %}
-<input type="text" name="content">
-<input type="submit" value="Comment">
-</form>
+
+	<form action="{% url 'articles:comment' article.id %}" method="post">
+	{% csrf_token %}
+	<input type="text" name="content">
+	<input type="submit" value="Comment">
+	</form>
+{% endif %}
 <!-- End form -->
 
 <hr/>
