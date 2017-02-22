@@ -12,4 +12,3 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['authenticated'] = self.request.user.is_authenticated()
         return context
-
