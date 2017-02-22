@@ -31,6 +31,13 @@ class ArticleDetailView(DetailView):
 class ArticleCommentView(LoginRequiredMixin, View):
     login_url = reverse_lazy('login')
 
+    def get(self, request, *args, **kwargs):
+        article = get_object_or_404(Article, id=kwargs['pk'])
+        context = {
+            'pk': article.id,
+        }
+        return HttpResponseRedirect(reverse_lazy('articles:detail', kwargs=context))
+
     def post(self, request, *args, **kwargs):
         article = get_object_or_404(Article, id=kwargs['pk'])
         comments = article.comments().order_by('-created')
