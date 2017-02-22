@@ -1,12 +1,12 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from . import views
+from .views import ArticleListView, ArticleDetailView, CommentArticleView, ArticleCreateView
 
 app_name = 'articles' # namespace for urls
 urlpatterns = [
-	url(r'^$', views.ArticleListView.as_view(), name='list'),
-	url(r'^(?P<pk>[0-9]+)/$', views.ArticleDetailView.as_view(), name='detail'),
-	url(r'^(?P<article_id>[0-9]+)/comment/$', views.comment, name='comment'),
-	url(r'^create/$', views.create, name='create'),
+	url(r'^$', ArticleListView.as_view(), name='list'),
+	url(r'^(?P<pk>[0-9]+)/$', ArticleDetailView.as_view(), name='detail'),
+	url(r'^(?P<pk>[0-9]+)/comment/$', CommentArticleView.as_view(), name='comment'),
+	url(r'^create/$', ArticleCreateView.as_view(), name='create'),
 ]

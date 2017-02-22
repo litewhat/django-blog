@@ -1,5 +1,3 @@
-<form action="{{ action_url }}" method="post">
-	{% csrf_token %}
-	{{ form }}
-	<input type="submit" value="Create">
-</form>
+{% if form %}
+    {% include 'articles/form.html' %}
+{% endif %}
