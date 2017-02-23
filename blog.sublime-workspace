@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"get_user",
+				"get_user_model\tfunction"
+			],
+			[
 				"rever",
 				"reverse_lazy\tfunction"
 			],
@@ -260,28 +264,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/articles/views.py",
+			"file": "src/accounts/models.py",
 			"settings":
 			{
-				"buffer_size": 1839,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/base.html",
-			"settings":
-			{
-				"buffer_size": 1515,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/navbar.html",
-			"settings":
-			{
-				"buffer_size": 2482,
+				"buffer_size": 692,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -354,7 +340,7 @@
 	[
 		"/home/litewhat/DjangoProjects/blog",
 		"/home/litewhat/DjangoProjects/blog/src",
-		"/home/litewhat/DjangoProjects/blog/src/articles",
+		"/home/litewhat/DjangoProjects/blog/src/accounts",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles",
 		"/home/litewhat/DjangoProjects/blog/src/blog",
@@ -363,17 +349,21 @@
 	],
 	"file_history":
 	[
+		"/home/litewhat/DjangoProjects/blog/src/accounts/signals.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
+		"/home/litewhat/DjangoProjects/blog/src/templates/base.html",
 		"/home/litewhat/DjangoProjects/blog/src/templates/home.html",
+		"/home/litewhat/DjangoProjects/blog/src/templates/navbar.html",
+		"/home/litewhat/DjangoProjects/blog/src/blog/views.py",
+		"/home/litewhat/DjangoProjects/blog/src/blog/settings.py",
+		"/home/litewhat/DjangoProjects/blog/src/accounts/admin.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/update_article.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/create_article.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/detail.html",
-		"/home/litewhat/DjangoProjects/blog/src/templates/base.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/index.html",
 		"/home/litewhat/DjangoProjects/blog/src/blog/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/templates/registration/login.html",
-		"/home/litewhat/DjangoProjects/blog/src/blog/settings.py",
-		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
-		"/home/litewhat/DjangoProjects/blog/src/blog/views.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/admin.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/form.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/forms.py",
@@ -480,6 +470,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"AUTH_USER_MODE",
 			"views",
 			"error_message",
 			"article",
@@ -560,60 +551,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/articles/views.py",
+					"file": "src/accounts/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1839,
+						"buffer_size": 692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1078,
-								1078
+								623,
+								623
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/templates/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1077,
-								1077
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -621,37 +581,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/templates/navbar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2094,
-								2094
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 264.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]

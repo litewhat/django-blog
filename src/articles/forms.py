@@ -4,6 +4,6 @@ from .models import Article
 
 class ArticleForm(ModelForm):
 
-	class Meta:
-		model = Article
-		exclude = ['created', 'updated']
+    class Meta:
+        model = Article
+        exclude = ['created', 'updated']

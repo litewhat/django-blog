@@ -5,7 +5,7 @@ from django.template import loader
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 
 from .models import Article, Comment
@@ -58,4 +58,13 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
     form_class = ArticleForm
     template_name = 'articles/create_article.html'
+    success_url = reverse_lazy('articles:list')
+
+
+
+class ArticleUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('login')
+    model = Article
+    form_class = ArticleForm
+    template_name = 'articles/update_article.html'
     success_url = reverse_lazy('articles:list')
