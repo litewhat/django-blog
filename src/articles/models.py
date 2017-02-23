@@ -7,7 +7,6 @@ class Article(models.Model):
     content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    # id = models.AutoField(primary_key=True) // django creates it automatically
 
     def __str__(self):
         str_repr = '{} | {}'.format(self.title, self.updated)

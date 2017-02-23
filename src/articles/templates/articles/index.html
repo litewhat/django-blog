@@ -3,7 +3,6 @@
 {% block title %}Articles{% endblock %}
 
 {% block content %}
-
     {% for article in articles %}
         <h2>{{ article.title }}</h2>
         <p>{{ article.content }}</p>
@@ -15,5 +14,4 @@
     {% empty %}
         <p>No articles yet!</p>
     {% endfor %}
-
 {% endblock %}

@@ -4,3 +4,4 @@ lib/
 pip-selfcheck.json
 blog.sublime-project
 share/
+*.pyc

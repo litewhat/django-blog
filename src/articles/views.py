@@ -7,10 +7,8 @@ from django.views import View
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView
 
-
 from .models import Article, Comment
 from .forms import ArticleForm
-
 
 
 class ArticleListView(ListView):
@@ -21,11 +19,9 @@ class ArticleListView(ListView):
         return Article.objects.all().order_by('-created')
 
 
-
 class ArticleDetailView(DetailView):
     model = Article
     template_name = 'articles/detail.html'
-
 
 
 class ArticleCommentView(LoginRequiredMixin, View):
@@ -45,12 +41,10 @@ class ArticleCommentView(LoginRequiredMixin, View):
         context = {
             'pk': article.id,
         }
-
         if comment_content:
             comment = Comment(article=article, content=comment_content)
             comment.save()
         return HttpResponseRedirect(reverse_lazy('articles:detail', kwargs=context))
-
 
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
@@ -59,7 +53,6 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     form_class = ArticleForm
     template_name = 'articles/create_article.html'
     success_url = reverse_lazy('articles:list')
-
 
 
 class ArticleUpdateView(LoginRequiredMixin, UpdateView):

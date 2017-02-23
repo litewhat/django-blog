@@ -4,7 +4,6 @@ from django.db import models
 from django.db.models.signals import post_save
 
 
-
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
@@ -16,7 +15,6 @@ def user_post_save(sender, **kwargs):
     user = kwargs['instance']
     if type(user) == get_user_model():
         qs = UserProfile.objects.filter(user=user)
-        
         if qs.count() == 0:
             profile = UserProfile(user=user)
             profile.save()
