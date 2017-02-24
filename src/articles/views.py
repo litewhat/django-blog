@@ -7,17 +7,15 @@ from django.views import View
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView
 
-from .models import Article, Comment
-from .forms import ArticleForm
+from articles.models import Article, Comment
+from articles.forms import ArticleForm
 from accounts.models import UserProfile
 
 
 class ArticleListView(ListView):
+    model = Article
     template_name = 'articles/index.html'
     context_object_name = 'articles'
-
-    def get_queryset(self):
-        return Article.objects.all().order_by('-created')
 
 
 class ArticleDetailView(DetailView):
@@ -30,27 +28,19 @@ class ArticleCommentView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         article = get_object_or_404(Article, id=kwargs['pk'])
-        context = {
-            'pk': article.id,
-        }
         return HttpResponseRedirect(reverse_lazy(
-                                        'articles:detail', kwargs=context)
-                                    )
+                                        'articles:detail', kwargs=kwargs))
 
     def post(self, request, *args, **kwargs):
         user_profile = get_object_or_404(UserProfile, user=request.user)
         article = get_object_or_404(Article, id=kwargs['pk'])
-        comment_content = request.POST.get('content')
-        context = {
-            'pk': article.id,
-        }
+        comment_content = request.POST['content']
         if comment_content is not None:
             comment = Comment(user_profile=user_profile, article=article,
                               content=comment_content)
             comment.save()
         return HttpResponseRedirect(reverse_lazy(
-                                        'articles:detail', kwargs=context)
-                                    )
+                                        'articles:detail', kwargs=kwargs))
 
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
@@ -62,7 +52,7 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         article = form.instance
-        qs = UserProfile.objects.filter(user=self.request.user)
+        qs = UserProfile.objects.get(user=self.request.user)
         if qs.count() == 1:
             user_profile = qs.first()
         article.user_profile = user_profile
@@ -75,3 +65,10 @@ class ArticleUpdateView(LoginRequiredMixin, UpdateView):
     form_class = ArticleForm
     template_name = 'articles/update_article.html'
     success_url = reverse_lazy('articles:list')
+
+    def dispatch(self, request, *args, **kwargs):
+        article = get_object_or_404(Article, pk=kwargs['pk'])
+        if request.user == article.user_profile.user:
+            return super().dispatch(request, *args, **kwargs)
+        return HttpResponseRedirect(reverse_lazy(
+                                        'articles:list', kwargs=kwargs))
