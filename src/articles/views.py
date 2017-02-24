@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from .models import Article, Comment
 from .forms import ArticleForm
+from accounts.models import UserProfile
 
 
 class ArticleListView(ListView):
@@ -32,19 +33,24 @@ class ArticleCommentView(LoginRequiredMixin, View):
         context = {
             'pk': article.id,
         }
-        return HttpResponseRedirect(reverse_lazy('articles:detail', kwargs=context))
+        return HttpResponseRedirect(reverse_lazy(
+                                        'articles:detail', kwargs=context)
+                                    )
 
     def post(self, request, *args, **kwargs):
+        user_profile = get_object_or_404(UserProfile, user=request.user)
         article = get_object_or_404(Article, id=kwargs['pk'])
-        comments = article.comments().order_by('-created')
         comment_content = request.POST.get('content')
         context = {
             'pk': article.id,
         }
         if comment_content:
-            comment = Comment(article=article, content=comment_content)
+            comment = Comment(user_profile=user_profile, article=article,
+                              content=comment_content)
             comment.save()
-        return HttpResponseRedirect(reverse_lazy('articles:detail', kwargs=context))
+        return HttpResponseRedirect(reverse_lazy(
+                                        'articles:detail', kwargs=context)
+                                    )
 
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
@@ -53,6 +59,14 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     form_class = ArticleForm
     template_name = 'articles/create_article.html'
     success_url = reverse_lazy('articles:list')
+
+    def form_valid(self, form):
+        article = form.instance
+        qs = UserProfile.objects.filter(user=self.request.user)
+        if qs.count() == 1:
+            user_profile = qs.first()
+        article.user_profile = user_profile
+        return super().form_valid(form)
 
 
 class ArticleUpdateView(LoginRequiredMixin, UpdateView):

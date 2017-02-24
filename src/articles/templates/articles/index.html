@@ -5,6 +5,7 @@
 {% block content %}
     {% for article in articles %}
         <h2>{{ article.title }}</h2>
+        <h6>by {{ article.author }}</h6>
         <p>{{ article.content }}</p>
         <h4>Updated: {{ article.updated }}</h4>
         <h4>Created: {{ article.created }}</h4>

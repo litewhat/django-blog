@@ -8,6 +8,7 @@
     <h4>{{ article.content }}</h4>
     <h6>{{ article.updated }}</h6>
     <h6>{{ article.created }}</h6>
+    <h6>{{ article.author }}<h6>
     {% if request.user.is_authenticated %}
         <hr/>
         <form action="{% url 'articles:comment' article.id %}" method="post">
@@ -22,6 +23,7 @@
     {% for comment in article.comments %}
         <h5>{{ comment.content }}</h5>
         <h6>Created: {{ comment.created }}</h6>
+        <h6>by {{ comment.author }}</h6>
         <hr/>
     {% empty %}
         <p>No comments yet.</p>

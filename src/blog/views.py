@@ -29,6 +29,9 @@ class HomePageView(TemplateView):
 
 
 class UserRegisterView(FormView):
+    '''
+    View rendering user registration form
+    '''
     template_name = 'registration/register.html'
     form_class = UserRegistrationForm
     success_url = reverse_lazy('login')
