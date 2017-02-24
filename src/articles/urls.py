@@ -1,9 +1,10 @@
 from django.conf.urls import url, include
-from django.contrib import admin
 
-from .views import ArticleListView, ArticleDetailView, ArticleCommentView, ArticleCreateView, ArticleUpdateView
+from articles.apps import ArticlesConfig
+from articles.views import *
 
-app_name = 'articles' # namespace for urls
+app_name = ArticlesConfig.name
+
 urlpatterns = [
 	url(r'^$', ArticleListView.as_view(), name='list'),
 	url(r'^(?P<pk>[0-9]+)/$', ArticleDetailView.as_view(), name='detail'),

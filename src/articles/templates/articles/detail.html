@@ -9,6 +9,7 @@
     <h6>{{ article.updated }}</h6>
     <h6>{{ article.created }}</h6>
     <h6>{{ article.author }}<h6>
+    <h6>Likes: {{ article.likes }}</h6>
     {% if request.user.is_authenticated %}
         <hr/>
         <form action="{% url 'articles:comment' article.id %}" method="post">
@@ -16,17 +17,17 @@
         <input type="text" name="content">
         <input type="submit" value="Comment">
         </form>
-    {% endif %}
-    <!-- End form -->
-
-    <hr/>
-    {% for comment in article.comments %}
-        <h5>{{ comment.content }}</h5>
-        <h6>Created: {{ comment.created }}</h6>
-        <h6>by {{ comment.author }}</h6>
+    
         <hr/>
-    {% empty %}
-        <p>No comments yet.</p>
-    {% endfor %}
+        {% for comment in article.comments %}
+            <h5>{{ comment.content }}</h5>
+            <h6>Created: {{ comment.created }}</h6>
+            <h6>by {{ comment.author }}</h6>
+            <h6>Likes: {{ comment.likes }}</h6>
+            <hr/>
+        {% empty %}
+            <p>No comments yet.</p>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}

@@ -6,4 +6,4 @@ class ArticleForm(ModelForm):
 
     class Meta:
         model = Article
-        exclude = ['user_profile', 'created', 'updated']
+        exclude = ['user_profile', 'likes', 'created', 'updated']

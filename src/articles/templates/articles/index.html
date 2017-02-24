@@ -9,7 +9,7 @@
         <p>{{ article.content }}</p>
         <h4>Updated: {{ article.updated }}</h4>
         <h4>Created: {{ article.created }}</h4>
-        <!-- <a href="{{ article.get_absolute_url }}">Detail</a> -->
+        <h6>Likes: {{ article.likes }}<h6>
         <a href="{% url 'articles:detail' article.id %}">Detail</a>
         <hr/>
     {% empty %}

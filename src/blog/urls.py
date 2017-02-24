@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from .views import HomePageView, UserRegisterView
+from blog.views import HomePageView, UserRegisterView
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='home'),
@@ -26,4 +26,5 @@ urlpatterns = [
 	url(r'^register/', UserRegisterView.as_view(), name='register'),
     url(r'^admin/', admin.site.urls),
     url(r'^articles/', include('articles.urls')),  
+    url(r'^profile/', include('accounts.urls')),  
 ]

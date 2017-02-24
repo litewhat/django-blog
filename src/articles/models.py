@@ -8,6 +8,7 @@ class Article(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     content = models.TextField()
+    likes = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -28,11 +29,11 @@ class Comment(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
+    likes = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        str_repr = 'article: {} | {}'.format(self.article.id, self.created)
-        return str_repr
+        return 'article: {} | {}'.format(self.article.id, self.created)
 
     def author(self):
         return self.user_profile.user.username

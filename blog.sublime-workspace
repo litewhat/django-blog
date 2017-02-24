@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"user",
+				"user_profile"
+			],
+			[
 				"pass",
 				"password_validators\tparam"
 			],
@@ -26,10 +34,6 @@
 			[
 				"rever",
 				"reverse_lazy\tfunction"
-			],
-			[
-				"get",
-				"get_context_data\tfunction"
 			],
 			[
 				"Te",
@@ -208,10 +212,6 @@
 				"queryset1\tstatement"
 			],
 			[
-				"user",
-				"user_profile\tstatement"
-			],
-			[
 				"sende",
 				"sender\tparam"
 			],
@@ -283,7 +283,60 @@
 			"file": "src/articles/models.py",
 			"settings":
 			{
-				"buffer_size": 863,
+				"buffer_size": 1196,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/urls.py",
+			"settings":
+			{
+				"buffer_size": 598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/forms.py",
+			"settings":
+			{
+				"buffer_size": 192,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/views.py",
+			"settings":
+			{
+				"buffer_size": 2635,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/templates/articles/detail.html",
+			"settings":
+			{
+				"buffer_size": 859,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/navbar.html",
+			"settings":
+			{
+				"buffer_size": 3150,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/articles/templates/articles/index.html",
+			"settings":
+			{
+				"buffer_size": 564,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -358,13 +411,22 @@
 		"/home/litewhat/DjangoProjects/blog/src",
 		"/home/litewhat/DjangoProjects/blog/src/accounts",
 		"/home/litewhat/DjangoProjects/blog/src/articles",
+		"/home/litewhat/DjangoProjects/blog/src/articles/__pycache__",
+		"/home/litewhat/DjangoProjects/blog/src/articles/migrations",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates",
+		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles",
 		"/home/litewhat/DjangoProjects/blog/src/blog",
+		"/home/litewhat/DjangoProjects/blog/src/templates",
 		"/home/litewhat/DjangoProjects/blog/static-storage"
 	],
 	"file_history":
 	[
-		"/home/litewhat/DjangoProjects/blog/src/articles/forms.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/migrations/0004_article_user_profile.py",
+		"/home/litewhat/DjangoProjects/blog/src/templates/navbar.html",
+		"/home/litewhat/DjangoProjects/blog/src/templates/home.html",
+		"/home/litewhat/DjangoProjects/blog/src/accounts/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/blog/views.py",
+		"/home/litewhat/DjangoProjects/blog/src/articles/forms.py",
 		"/home/litewhat/DjangoProjects/blog/src/blog/forms.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/views.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/models.py",
@@ -377,8 +439,6 @@
 		"/home/litewhat/DjangoProjects/blog/.gitignore",
 		"/home/litewhat/DjangoProjects/blog/src/templates/registration/register.html",
 		"/home/litewhat/DjangoProjects/blog/src/blog/urls.py",
-		"/home/litewhat/DjangoProjects/blog/src/templates/navbar.html",
-		"/home/litewhat/DjangoProjects/blog/src/templates/home.html",
 		"/home/litewhat/DjangoProjects/blog/src/articles/urls.py",
 		"/home/litewhat/DjangoProjects/blog/src/articles/templates/articles/form.html",
 		"/home/litewhat/DjangoProjects/blog/src/accounts/signals.py",
@@ -488,6 +548,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"comments",
+			"title",
 			"()",
 			"cleaned_data",
 			"password",
@@ -574,7 +636,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -583,15 +645,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 863,
+						"buffer_size": 1196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
+								1100,
+								1100
 							]
 						],
 						"settings":
@@ -604,7 +666,183 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/articles/urls.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/articles/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/articles/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1509,
+								1509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/articles/templates/articles/detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 859,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								415,
+								415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/templates/navbar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/articles/templates/articles/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

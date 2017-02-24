@@ -44,7 +44,7 @@ class ArticleCommentView(LoginRequiredMixin, View):
         context = {
             'pk': article.id,
         }
-        if comment_content:
+        if comment_content is not None:
             comment = Comment(user_profile=user_profile, article=article,
                               content=comment_content)
             comment.save()
