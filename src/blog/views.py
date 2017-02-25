@@ -6,8 +6,11 @@ from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
-from .forms import UserRegistrationForm
+from blog.forms import UserRegistrationForm
 from articles.forms import ArticleForm
+from articles.models import Article
+
+import random
 
 User = get_user_model()
 
@@ -16,16 +19,10 @@ class HomePageView(TemplateView):
     template_name = 'home.html'
     query_string = True
 
-    def get(self, request):
-        if request.GET:
-            # it can be passed in the future in searching form
-            print(request.GET['q'])
-        return render(request, self.template_name)
-
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['authenticated'] = self.request.user.is_authenticated()
-        return context
+        queryset = Article.objects.all()
+        kwargs['article'] = random.choice(queryset)
+        return super().get_context_data(**kwargs)
 
 
 class UserRegisterView(FormView):

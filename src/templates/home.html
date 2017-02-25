@@ -3,9 +3,11 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-
-{% if authenticated %}
-    User: {{ request.user }}
-{% endif %}
-
+	<h2>{{ article.title }}</h2>
+    <h4>{{ article.content }}</h4>
+    <h6>{{ article.updated }}</h6>
+    <h6>{{ article.created }}</h6>
+    <h6>{{ article.author }}<h6>
+    <h6>Likes: {{ article.liked_by.count }}</h6>
+    <hr/>
 {% endblock %}

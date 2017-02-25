@@ -3,5 +3,10 @@
 {% block title %}{{ request.user }} | Profile{% endblock %}
 
 {% block content %}
+    {{ articles }}
+{% endblock %}
 
+{% block aside %}
+    You are following:<br/>
+    You are followed by: <br/>
 {% endblock %}

@@ -9,8 +9,9 @@
     <h6>{{ article.updated }}</h6>
     <h6>{{ article.created }}</h6>
     <h6>{{ article.author }}<h6>
-    <h6>Likes: {{ article.likes }}</h6>
+    <h6>Likes: {{ article.liked_by.count }}</h6>
     {% if request.user.is_authenticated %}
+    <a href="{% url 'articles:like' article.id %}"><span>Like</span></a>
         <hr/>
         <form action="{% url 'articles:comment' article.id %}" method="post">
         {% csrf_token %}
@@ -23,7 +24,8 @@
             <h5>{{ comment.content }}</h5>
             <h6>Created: {{ comment.created }}</h6>
             <h6>by {{ comment.author }}</h6>
-            <h6>Likes: {{ comment.likes }}</h6>
+            <h6>Likes: {{ comment.liked_by.count }}</h6>
+            <a href="{% url 'articles:comment-like' comment.id %}"><span>Like</span></a>
             <hr/>
         {% empty %}
             <p>No comments yet.</p>
