@@ -40,6 +40,7 @@ class UserRegisterView(FormView):
         return super().render_to_response(context, **response_kwargs)
 
     def form_valid(self, form):
+        print('in form valid')
         username = form.data['username']
         email = form.data['email']
         password = form.data['password']       
@@ -47,5 +48,5 @@ class UserRegisterView(FormView):
         if qs.count() == 0:
             new_user = User(username=username, email=email)
             new_user.set_password(password)
-            new_user.save()       
+            new_user.save()
         return super().form_valid(form)

@@ -66,7 +66,7 @@ class ArticleCommentView(LoginRequiredMixin, View):
         user_profile = get_object_or_404(UserProfile, user=request.user)
         article = get_object_or_404(Article, id=kwargs['pk'])
         comment_content = request.POST['content']
-        if comment_content is not None:
+        if comment_content:
             comment = Comment(user_profile=user_profile, article=article,
                               content=comment_content)
             comment.save()

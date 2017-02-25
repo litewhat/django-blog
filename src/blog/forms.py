@@ -4,15 +4,11 @@ from django.contrib.auth.password_validation import validate_password
 
 User = get_user_model()
 
-class UserRegistrationForm(forms.ModelForm):
+class UserRegistrationForm(forms.Form):
     username = forms.CharField(label='Username')
     email = forms.EmailField(label='Email')
     password = forms.CharField(widget=forms.PasswordInput())
     confirm_password = forms.CharField(label='Confirm', widget=forms.PasswordInput())
-
-    class Meta:
-        model = User
-        fields = ['username', 'email', 'password', 'confirm_password']
 
     def clean_email(self):
         email = self.data['email']
