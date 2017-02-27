@@ -7,4 +7,5 @@ app_name = AccountsConfig.name
 
 urlpatterns = [
 	url(r'^(?P<username>\w+)/$', ProfileHomeView.as_view(), name='profile'),
+	url(r'^(?P<username>\w+)/settings/$', SettingsView.as_view(), name='settings'),
 ]

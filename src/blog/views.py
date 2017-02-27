@@ -1,8 +1,10 @@
 from django.contrib.auth import get_user_model
+from django.db.models import Q
 from django.forms import ValidationError
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.views.generic import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
@@ -50,3 +52,17 @@ class UserRegisterView(FormView):
             new_user.set_password(password)
             new_user.save()
         return super().form_valid(form)
+
+
+class SearchView(ListView):
+    template_name = 'articles/index.html'
+    context_object_name = 'articles'
+
+    def get_queryset(self):
+        if self.request.GET['q']:
+            query = self.request.GET['q']
+        qs = Article.objects.filter(
+                        Q(title__icontains=query) |
+                        Q(content__icontains=query) |
+                        Q(user_profile__user__username__icontains=query))
+        return qs
