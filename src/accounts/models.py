@@ -5,11 +5,16 @@ from django.db.models.signals import post_save
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, 
+                                on_delete=models.CASCADE,
+                                related_name='user_profile')
     avatar = models.ImageField(null=True)
 
     def __str__(self):
         return '{}_profile'.format(self.user.username)
+
+    def liked_articles(self):
+        return UserProfile.liked_articles
 
 
 def user_post_save(sender, **kwargs):

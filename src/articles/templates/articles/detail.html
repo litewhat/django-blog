@@ -11,7 +11,13 @@
     <h6>{{ article.author }}<h6>
     <h6>Likes: {{ article.liked_by.count }}</h6>
     {% if request.user.is_authenticated %}
-    <a href="{% url 'articles:like' article.id %}"><span>Like</span></a>
+        <a href="{% url 'articles:like' article.id %}">
+            {% if article not in request.user.user_profile.liked_articles.all %}
+                <span>Like</span>
+            {% else %}
+                <span>Unlike</span>
+            {% endif %}
+        </a>
         <hr/>
         <form action="{% url 'articles:comment' article.id %}" method="post">
         {% csrf_token %}
@@ -25,7 +31,13 @@
             <h6>Created: {{ comment.created }}</h6>
             <h6>by {{ comment.author }}</h6>
             <h6>Likes: {{ comment.liked_by.count }}</h6>
-            <a href="{% url 'articles:comment-like' comment.id %}"><span>Like</span></a>
+            <a href="{% url 'articles:comment-like' comment.id %}">
+                {% if comment not in request.user.user_profile.liked_comments.all %}
+                    <span>Like</span>
+                {% else %}
+                    <span>Unlike</span>
+                {% endif %}
+            </a>
             <hr/>
         {% empty %}
             <p>No comments yet.</p>

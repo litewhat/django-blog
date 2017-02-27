@@ -10,7 +10,13 @@
         <h6>Updated: {{ article.updated }}</h6>
         <h6>Created: {{ article.created }}</h6>
         <h6>Likes: {{ article.liked_by.count }}<h6>
-        <a href="{% url 'articles:like' article.id %}"><span>Like</span></a>
+        <a href="{% url 'articles:like' article.id %}">
+        {% if article not in request.user.user_profile.liked_articles.all %}
+                <span>Like</span>
+            {% else %}
+                <span>Unlike</span>
+            {% endif %}
+        </a>
          | <a href="{% url 'articles:detail' article.id %}">Detail</a>
         {% if request.user == article.user_profile.user %}
          | <a href="{% url 'articles:update' article.id %}">Edit</a>
@@ -20,3 +26,7 @@
         <p>No articles yet!</p>
     {% endfor %}
 {% endblock %}
+
+<a href="{% url 'articles:like' article.id %}">
+            
+        </a>

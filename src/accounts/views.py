@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic.base import TemplateView
@@ -28,6 +29,14 @@ class SettingsView(LoginRequiredMixin, UpdateView):
     slug_url_kwargs = 'username'
     quert_pk_and_slug = True
     context_object_name = 'profile'
+
+    def dispatch(self, request, *args, **kwargs):
+        user_profile = get_object_or_404(UserProfile, user__username=kwargs['username'])
+        if request.user == user_profile.user:
+            return super().dispatch(request, *args, **kwargs)
+        kwargs['username'] = request.user.username
+        return HttpResponseRedirect(reverse_lazy(
+                                        'accounts:profile', kwargs=kwargs))
 
     def get_object(self):
         return UserProfile.objects.get(user__username=self.kwargs[self.slug_url_kwargs])
