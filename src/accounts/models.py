@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class UserProfile(models.Model):
@@ -13,10 +14,8 @@ class UserProfile(models.Model):
     def __str__(self):
         return '{}_profile'.format(self.user.username)
 
-    def liked_articles(self):
-        return UserProfile.liked_articles
 
-
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def user_post_save(sender, **kwargs):
     user = kwargs['instance']
     if type(user) == get_user_model():
@@ -24,6 +23,3 @@ def user_post_save(sender, **kwargs):
         if qs.count() == 0:
             profile = UserProfile(user=user)
             profile.save()
-
-
-post_save.connect(user_post_save, sender=settings.AUTH_USER_MODEL)

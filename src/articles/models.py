@@ -6,7 +6,8 @@ from accounts.models import UserProfile
 
 class Article(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    liked_by = models.ManyToManyField(UserProfile, related_name='liked_articles')
+    liked_by = models.ManyToManyField(UserProfile,
+                                      related_name='liked_articles')
     title = models.CharField(max_length=200)
     content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
@@ -30,7 +31,8 @@ class Article(models.Model):
 
 class Comment(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    liked_by = models.ManyToManyField(UserProfile, related_name='liked_comments')
+    liked_by = models.ManyToManyField(UserProfile,
+                                      related_name='liked_comments')
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
     created = models.DateTimeField(auto_now_add=True)

@@ -12,20 +12,21 @@ from articles.forms import ArticleForm
 from accounts.models import UserProfile
 
 
-class ArticleListView(ListView):
+class ArticleMixin(object):
     model = Article
+
+
+class ArticleListView(ArticleMixin, ListView):
     template_name = 'articles/index.html'
     context_object_name = 'articles'
 
 
-class ArticleDetailView(DetailView):
-    model = Article
+class ArticleDetailView(ArticleMixin, DetailView):
     template_name = 'articles/detail.html'
 
 
-class ArticleCreateView(LoginRequiredMixin, CreateView):
+class ArticleCreateView(LoginRequiredMixin, ArticleMixin, CreateView):
     login_url = reverse_lazy('login')
-    model = Article
     form_class = ArticleForm
     template_name = 'articles/create_article.html'
     success_url = reverse_lazy('articles:list')
@@ -48,6 +49,7 @@ class ArticleUpdateView(LoginRequiredMixin, UpdateView):
 
     def dispatch(self, request, *args, **kwargs):
         article = get_object_or_404(Article, pk=kwargs['pk'])
+        # authorization
         if request.user == article.user_profile.user:
             return super().dispatch(request, *args, **kwargs)
         return HttpResponseRedirect(reverse_lazy(

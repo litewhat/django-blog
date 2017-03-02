@@ -8,7 +8,8 @@ class UserRegistrationForm(forms.Form):
     username = forms.CharField(label='Username')
     email = forms.EmailField(label='Email')
     password = forms.CharField(widget=forms.PasswordInput())
-    confirm_password = forms.CharField(label='Confirm', widget=forms.PasswordInput())
+    confirm_password = forms.CharField(label='Confirm', 
+                                       widget=forms.PasswordInput())
 
     def clean_email(self):
         email = self.data['email']
@@ -22,8 +23,8 @@ class UserRegistrationForm(forms.Form):
         validate_password(password)
         return password
 
-    def clean_confirm_password(self):
-        password = self.data['password']
+    def clean(self):
+        password = self.cleaned_data['password']
         confirm_password = self.cleaned_data['confirm_password']
         if password != confirm_password:
             raise forms.ValidationError('Password should match.')
