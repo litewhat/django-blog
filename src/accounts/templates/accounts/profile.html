@@ -3,8 +3,10 @@
 {% block title %}{{ request.user }} | Profile{% endblock %}
 
 {% block content %}
-    {{ articles }}
+    {% include 'articles/article_list.html' %}
+    {% include 'paginator.html' %}
 {% endblock %}
+
 
 {% block aside %}
     You are following:<br/>

@@ -3,30 +3,7 @@
 {% block title %}Articles{% endblock %}
 
 {% block content %}
-    {% for article in articles %}
-        <h2>{{ article.title }}</h2>
-        <h5>by {{ article.author }}</h5>
-        <p>{{ article.content }}</p>
-        <h6>Updated: {{ article.updated }}</h6>
-        <h6>Created: {{ article.created }}</h6>
-        <h6>Likes: {{ article.liked_by.count }}<h6>
-        <a href="{% url 'articles:like' article.id %}">
-        {% if article not in request.user.user_profile.liked_articles.all %}
-                <span>Like</span>
-            {% else %}
-                <span>Unlike</span>
-            {% endif %}
-        </a>
-         | <a href="{% url 'articles:detail' article.id %}">Detail</a>
-        {% if request.user == article.user_profile.user %}
-         | <a href="{% url 'articles:update' article.id %}">Edit</a>
-        {% endif %}
-        <hr/>
-    {% empty %}
-        <p>No articles yet!</p>
-    {% endfor %}
+    {% include 'articles/article_list.html' %}
+    {% include 'paginator.html' %}
 {% endblock %}
 
-<a href="{% url 'articles:like' article.id %}">
-            
-        </a>

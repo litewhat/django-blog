@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
@@ -16,7 +17,9 @@ class ProfileHomeView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         if self.request.user.username == kwargs['username']:
-            queryset = Article.objects.filter(user_profile__user=self.request.user)
+            queryset = Article.objects.filter(
+                            Q(user_profile__user=self.request.user) |
+                            Q(liked_by=self.request.user.user_profile))
             kwargs['articles'] = queryset
         return super().get_context_data(**kwargs)
 

@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.template import loader
@@ -19,7 +20,12 @@ class ArticleMixin(object):
 class ArticleListView(ArticleMixin, ListView):
     template_name = 'articles/index.html'
     context_object_name = 'articles'
-
+    paginate_by = 3 
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print(context)
+        return context
 
 class ArticleDetailView(ArticleMixin, DetailView):
     template_name = 'articles/detail.html'
