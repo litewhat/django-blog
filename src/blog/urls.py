@@ -26,8 +26,10 @@ urlpatterns = [
     url(r'^login/', auth_views.login, name='login'),
     url(r'^logout/', auth_views.logout, name='logout'),
     url(r'^register/', UserRegisterView.as_view(), name='register'),
-	url(r'^search/', SearchView.as_view(), name='search'),
+    url(r'^search/', SearchView.as_view(), name='search'),
     url(r'^admin/', admin.site.urls),
+    url(r'^livechat/', include('livechat.urls')),
     url(r'^articles/', include('articles.urls')),
     url(r'^profile/', include('accounts.urls')),
+    url(r'^api/articles/', include('articles.api.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

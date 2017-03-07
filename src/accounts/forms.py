@@ -1,9 +1,11 @@
-from django.forms import ModelForm
+from django import forms
 
 from accounts.models import UserProfile
 
 
-class UserProfileForm(ModelForm):
+class UserProfileForm(forms.ModelForm):
+    house = forms.CharField()
+    apartment = forms.CharField()
 
     class Meta:
         model = UserProfile
